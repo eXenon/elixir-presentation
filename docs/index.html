@@ -19,14 +19,6 @@
             <div class="slides"><section  data-markdown><script type="text/template"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
 <h1 class="title">Elixir</h1>
 </script></section><section  data-markdown><script type="text/template">
-<h4>The Erlang Stack</h4>
-
-<img src="./img/erlang_stack.png" height=500px></img>
-
-
-<span class="didyouknow"><i class='fas fa-info-circle'></i>BEAM = Bogdan/Björn's Erlang Abstract Machine</span>
-<span class="didyouknow"><i class='fas fa-info-circle'></i>OTP = Open Telecom Platform</span>
-</script></section><section  data-markdown><script type="text/template">
 <div class="left half">
     <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/Erlang_logo.svg/1200px-Erlang_logo.svg.png" height=100px style="background:white"/><br>
     Created in 1987 by Ericsson<br>
@@ -52,11 +44,18 @@ Actors are independent processes that have their own code, data and state.
 <br><br>
 <span class="hl title">BEAM</span><br>
 The BEAM VM is built to run on very different supports from low-powered ARM cores to a cluster of high performance x64 beasts. It introduces the notion of <b>green thread</b>, a very light-weight process, as well as preemptive scheduling and garbage collection.
-</p>
 <br><br>
 <span class="hl title">OTP</span><br>
 This "standard library" is built around the core ideas of <b>concurrency, fault tolerance and distribution</b>.
 </p>
+</script></section><section  data-markdown><script type="text/template">
+<h4>The Erlang Stack</h4>
+
+<img src="./img/erlang_stack.png" height=500px></img>
+
+
+<span class="didyouknow"><i class='fas fa-info-circle'></i>BEAM = Bogdan/Björn's Erlang Abstract Machine</span>
+<span class="didyouknow"><i class='fas fa-info-circle'></i>OTP = Open Telecom Platform</span>
 </script></section><section  data-markdown><script type="text/template">
 <h4 class="title">Actor Model</h4>
 
