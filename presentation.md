@@ -17,14 +17,14 @@
     <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/Erlang_logo.svg/1200px-Erlang_logo.svg.png" height=100px style="background:white"/><br>
     Created in 1987 by Ericsson<br>
     <br>
-    Latest Version : 20.2 (December 2017)
+    Latest Version : 21.3 (April 2019)
 </div>
 
 <div class="right half">
     <img src="https://upload.wikimedia.org/wikipedia/commons/9/92/Official_Elixir_logo.png" height=100px style="background:white"/><br>
     Created in 2012 by José Valim Hernàndez<br>
     <br>
-    Latest Version : 1.6.5 (May 2018)
+    Latest Version : 1.8.1 (January 2019)
 </div>
 
 ---
@@ -32,14 +32,15 @@
 <h4 class="title">The Erlang Core Principles</h4>
 
 <p class="t">
-<span class="hl title">Functional Programming</span><br>
-See above.
-<br><br>
-<span class="hl title">Strong, dynamic, typing</span><br>
-See above.
+<span class="hl title">Dynamic typing & functional paradigm</span><br>
+Data is entirely immutable, which is really usefull for efficient parallelism.
 <br><br>
 <span class="hl title">Actor Model</span><br>
 Actors are independent processes that have their own code, data and state.
+<br><br>
+<span class="hl title">BEAM</span><br>
+The BEAM VM is built to run on very different supports from low-powered ARM cores to a cluster of high performance x64 beasts. It introduces the notion of <b>green thread</b>, a very light-weight process, as well as preemptive scheduling and garbage collection.
+</p>
 <br><br>
 <span class="hl title">OTP</span><br>
 This "standard library" is built around the core ideas of <b>concurrency, fault tolerance and distribution</b>.
@@ -101,7 +102,7 @@ that run <b class="hl">forever</b>."<br>
 <br>
 
 <small>
-With Erlang, Ericsson managed to get a switch to 9-nines availability.<br>
+With Erlang, Ericsson managed to get a telecom switch to 9-nines availability.<br>
 That is less than 1s downtime over 20 years.
 </small>
 
@@ -120,12 +121,12 @@ reused to write Erlang code.
 
 <br>
 
-Elixir is just a new syntax over Erlang.<br>
+Elixir is just a new syntax that compiles down to BEAM instructions.<br>
+Elixir and Erlang are entirely interoperable.
 
 ---
 
-https://wandbox.org/  
-https://github.com/eXenon/fp-presentation
+https://wandbox.org/
 
 ---
 
@@ -158,24 +159,6 @@ defmodule Users do
         IO.puts "Unknown user or bad password..."
     end
 end
-```
-
----
-
-Functional programming is, well, a lot of functions.<br>
-The pipe operator allows to chain functions :
-
-```
-defmodule Operations do
-    def op1(a) do
-        String.downcase(a)
-    end
-    def op2(a, b) do
-        a <> b
-    end
-end
-
-"FOO" |> Operations.op1 |> Operations.op2("bar") |> IO.puts
 ```
 
 ---
@@ -253,15 +236,6 @@ NGINX & Ruby on Rails on the BEAM<br>
 
 ---
 
-<h2>Conclusion</h2>
-
-Functional programing helps thinking about problems.
-But it is rarely sufficient and is best used in combination with imperative.<br>
-<br>
-A functional core, with an imperative shell.
-
----
-
 <h4 class="title">Questions ?</h4>
 
 ---
@@ -271,9 +245,7 @@ A functional core, with an imperative shell.
 <div class="left half t">
 <p class="hl">Books</p>
 - Programming Elixir<br>
-- Hands on Haskell<br>
-- Elements of Clojure<br>
-- Category Theory for Programmers
+- Erlang in Anger
 <br>
 <br>
 <p class="hl">Tutorials</p>
@@ -284,14 +256,6 @@ A functional core, with an imperative shell.
 
 <div class="right half t">
 <p class="hl">Podcasts</p>
-- Lambda Cast<br>
-- Elm Town<br>
-- Reason Town<br>
-- Functional Geekery
+- Elixir Outlaws<br>
+- Elixir Talks
 <br>
-<br>
-<p class="hl">Talks</p>
-- FP by John Carmack<br>
-- Effective Programs by Rich Hickey<br>
-- Functional Core, Imperative Shell by DAS<br>
-</div>
