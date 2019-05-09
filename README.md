@@ -1,1 +1,1 @@
-Slides and files for Functional Programming Presentation
+Slides and files for Elixir presentation
